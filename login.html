@@ -61,8 +61,8 @@
             }
 
             if (authenticated) {
-                alert("Login successful!");
-                return true;
+                window.location.href = "welcome.html"; // ログイン成功後にリダイレクト
+                return false; // フォームのサブミットをキャンセル
             } else {
                 var errorMessage = "Invalid username or password.";
                 document.getElementById('error-msg').innerText = errorMessage;
